@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чистильщик кэша 1С | Официальный сайт</title>
+   <meta name="description" content="Чистильщик кэша 1С - программа для очистки временных файлов 1С.    Ускоряет работу, освобождает место на диске. Бесплатно, безопасно, не требует установки.">
+   <meta name="keywords" content="чистильщик кэша 1с, очистка кэша 1с, ускорить 1с, удалить временные    файлы 1с, программа для 1с">
+   <meta name="author" content="Твое имя">
+    <style>
+        /* Стили для красивого сайта */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Шапка */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: #667eea;
+        }
+        
+        /* Главный блок */
+        .hero {
+            background: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .btn {
+            padding: 15px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #48bb78;
+            color: white;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #667eea;
+            color: #667eea;
+        }
+        
+        /* Скриншот */
+        .screenshot {
+            background: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .screenshot img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            border: 1px solid #ddd;
+        }
+        
+        .screenshot h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        /* Возможности */
+        .features {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .feature-card p {
+            color: #666;
+        }
+        
+        /* Статистика */
+        .stats {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .stat-item h3 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Как скачать */
+        .download {
+            background: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .download h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .download p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .download-info {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 30px auto;
+            text-align: left;
+        }
+        
+        .download-info li {
+            margin: 10px 0;
+            list-style: none;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .download-info li:before {
+            content: "✓";
+            color: #48bb78;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Отзывы */
+        .testimonials {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .testimonial-position {
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* Подвал */
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+            margin: 5px 0;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">1C Cleaner</div>
+            <nav class="nav">
+                <a href="#about">О программе</a>
+                <a href="#features">Возможности</a>
+                <a href="#download">Скачать</a>
+                <a href="#reviews">Отзывы</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Главный блок -->
+    <section class="hero" id="about">
+        <div class="container">
+            <h1>Чистильщик кэша 1С</h1>
+            <p>Ускорьте работу 1С за 1 минуту. Программа автоматически находит и очищает кэш 1С, освобождая гигабайты места на диске.</p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn btn-primary">Скачать бесплатно</a>
+                <a href="#features" class="btn btn-outline">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Скриншот программы -->
+    <section class="screenshot">
+        <div class="container">
+            <h2>Как выглядит программа</h2>
+            <img src="screenshot.png" alt="Скриншот программы" onerror="this.style.display='none'">
+            <p style="margin-top: 20px; color: #666;">* Здесь будет скриншот твоей программы</p>
+        </div>
+    </section>
+    
+    <!-- Возможности -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Возможности программы</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Автоматический поиск</h3>
+                    <p>Программа сама находит все папки с кэшем 1С на вашем компьютере</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Расчет размера</h3>
+                    <p>Показывает сколько места занимает каждая папка и общий размер кэша</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Выборочная очистка</h3>
+                    <p>Можно выбрать конкретные папки или очистить всё сразу</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Статистика очисток</h3>
+                    <p>Ведет учет сколько раз чистили и сколько файлов удалили</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Безопасность</h3>
+                    <p>Удаляет только содержимое папок, сами папки сохраняются</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Быстрая работа</h3>
+                    <p>Очистка происходит в несколько раз быстрее ручного удаления</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Статистика -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>1000+</h3>
+                    <p>пользователей</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>очисток в день</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1 ТБ+</h3>
+                    <p>освобождено места</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Скачать -->
+    <section class="download" id="download">
+        <div class="container">
+            <h2>Скачать программу</h2>
+            <p>Полностью бесплатно. Без регистрации и смс.</p>
+            
+            <div class="download-info">
+                <h3>Версия 2.0</h3>
+                <ul>
+                    <li>✅ Автоматический поиск кэша</li>
+                    <li>✅ Расчет размера папок</li>
+                    <li>✅ Выборочная очистка</li>
+                    <li>✅ Статистика очисток</li>
+                    <li>✅ Поддержка Windows 10/11</li>
+                </ul>
+                <p style="margin-top: 20px; font-size: 14px;">Размер: ~10 МБ</p>
+            </div>
+            
+            <a href="1C_CacheCleaner.exe" class="btn btn-primary" style="margin-right: 10px;" download>Скачать .exe</a>
+            <a href="#" class="btn btn-secondary">Скачать с Яндекс.Диска</a>
+            
+            <p style="margin-top: 20px; color: #999; font-size: 14px;">
+                Программа не требует установки. Просто запустите .exe файл.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Отзывы -->
+    <section class="testimonials" id="reviews">
+        <div class="container">
+            <h2>Что говорят пользователи</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Отличная программа! Раньше 1С тормозила ужасно, после очистки всё летает. Спасибо!"
+                    </div>
+                    <div class="testimonial-author">Елена, бухгалтер</div>
+                    <div class="testimonial-position">ООО "Ромашка"</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "У нас в компании 30 бухгалтеров. Раньше ходил по всем и чистил вручную. Теперь запускаю программу удаленно и всё готово."
+                    </div>
+                    <div class="testimonial-author">Алексей, системный администратор</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Простая и понятная программа. Никаких лишних настроек. Нажал кнопку и готово. Рекомендую!"
+                    </div>
+                    <div class="testimonial-author">Мария, главный бухгалтер</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Чистильщик кэша 1С</p>
+            <p>По всем вопросам: issak@email.com</p>
+            <p style="margin-top: 20px; font-size: 12px;">Программа распространяется бесплатно</p>
+        </div>
+    </footer>
+</body>
+</html>
