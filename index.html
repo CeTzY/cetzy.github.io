@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Чистильщик кэша 1С | Официальный сайт</title>
-   <meta name="keywords" content="чистильщик кэша 1с, очистка кэша 1с, ускорить 1с, программа для 1с, удалить временные файлы 1с, 1с тормозит, очистка 1с">
-   <meta name="description" content="Чистильщик кэша 1С - программа для очистки временных файлов 1С.    Ускоряет работу, освобождает место на диске. Бесплатно, безопасно, не требует установки.">
-   <meta name="keywords" content="чистильщик кэша 1с, очистка кэша 1с, ускорить 1с, удалить временные    файлы 1с, программа для 1с">
-   <meta name="author" content="Твое имя">
+    <meta name="keywords" content="чистильщик кэша 1с, очистка кэша 1с, ускорить 1с, программа для 1с, удалить временные файлы 1с, 1с тормозит, очистка 1с">
+    <meta name="description" content="Чистильщик кэша 1С - программа для очистки временных файлов 1С. Ускоряет работу, освобождает место на диске. Бесплатно, безопасно, не требует установки.">
+    <meta name="author" content="Твое имя">
     <style>
-        /* Стили для красивого сайта */
         * {
             margin: 0;
             padding: 0;
@@ -29,7 +27,6 @@
             padding: 0 20px;
         }
         
-        /* Шапка */
         .header {
             background: rgba(255, 255, 255, 0.95);
             padding: 20px 0;
@@ -63,7 +60,6 @@
             color: #667eea;
         }
         
-        /* Главный блок */
         .hero {
             background: white;
             padding: 80px 0;
@@ -122,7 +118,6 @@
             color: #667eea;
         }
         
-        /* Скриншот */
         .screenshot {
             background: #f8f9fa;
             padding: 60px 0;
@@ -142,7 +137,6 @@
             color: #333;
         }
         
-        /* Возможности */
         .features {
             background: white;
             padding: 80px 0;
@@ -188,7 +182,6 @@
             color: #666;
         }
         
-        /* Статистика */
         .stats {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -214,7 +207,6 @@
             opacity: 0.9;
         }
         
-        /* Как скачать */
         .download {
             background: white;
             padding: 80px 0;
@@ -257,48 +249,127 @@
             font-weight: bold;
         }
         
-        /* Отзывы */
-        .testimonials {
+        /* Стили для формы отзывов */
+        .reviews {
             background: #f8f9fa;
             padding: 80px 0;
         }
         
-        .testimonials h2 {
+        .reviews h2 {
             text-align: center;
             font-size: 36px;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
         
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .testimonial-card {
+        .review-form {
+            max-width: 600px;
+            margin: 0 auto 50px;
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
         
-        .testimonial-text {
-            font-style: italic;
+        .form-group {
             margin-bottom: 20px;
-            color: #555;
         }
         
-        .testimonial-author {
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .form-hint {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+        
+        .submit-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #5a67d8;
+        }
+        
+        .submit-btn:disabled {
+            background: #999;
+            cursor: not-allowed;
+        }
+        
+        .reviews-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .review-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .review-author {
             font-weight: bold;
             color: #333;
         }
         
-        .testimonial-position {
+        .review-date {
             color: #999;
-            font-size: 14px;
         }
         
-        /* Подвал */
+        .review-text {
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .no-reviews {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            padding: 30px;
+        }
+        
         .footer {
             background: #2d3748;
             color: white;
@@ -311,7 +382,6 @@
             margin: 5px 0;
         }
         
-        /* Адаптивность */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 36px;
@@ -330,10 +400,29 @@
                 display: none;
             }
         }
+
+        /* Уведомления */
+        .notification {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .notification.success {
+            background: #48bb78;
+            color: white;
+        }
+        
+        .notification.error {
+            background: #f56565;
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <!-- Шапка -->
     <header class="header">
         <div class="container header-content">
             <div class="logo">1C Cleaner</div>
@@ -346,7 +435,6 @@
         </div>
     </header>
     
-    <!-- Главный блок -->
     <section class="hero" id="about">
         <div class="container">
             <h1>Чистильщик кэша 1С</h1>
@@ -358,16 +446,13 @@
         </div>
     </section>
     
-    <!-- Скриншот программы -->
     <section class="screenshot">
         <div class="container">
             <h2>Как выглядит программа</h2>
             <img src="screenshot.png" alt="Скриншот программы" onerror="this.style.display='none'">
-            <p style="margin-top: 20px; color: #666;">* Здесь будет скриншот твоей программы</p>
         </div>
     </section>
     
-    <!-- Возможности -->
     <section class="features" id="features">
         <div class="container">
             <h2>Возможности программы</h2>
@@ -406,27 +491,26 @@
         </div>
     </section>
     
-    <!-- Статистика -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <h3>1000+</h3>
+                    <h3>0</h3>
                     <p>пользователей</p>
                 </div>
                 <div class="stat-item">
-                    <h3>500+</h3>
+                    <h3>0</h3>
                     <p>очисток в день</p>
                 </div>
                 <div class="stat-item">
-                    <h3>1 ТБ+</h3>
+                    <h3>0</h3>
                     <p>освобождено места</p>
                 </div>
             </div>
+            <p style="margin-top: 20px; opacity: 0.9;">Статистика обновится после первых скачиваний</p>
         </div>
     </section>
     
-    <!-- Скачать -->
     <section class="download" id="download">
         <div class="container">
             <h2>Скачать программу</h2>
@@ -444,7 +528,7 @@
                 <p style="margin-top: 20px; font-size: 14px;">Размер: ~10 МБ</p>
             </div>
             
-            <a href="1C_CacheCleaner.exe" class="btn btn-primary" style="margin-right: 10px;" download>Скачать .exe</a>
+            <a href="1C_CacheCleaner.exe" class="btn btn-primary" style="margin-right: 10px;">Скачать .exe</a>
             <a href="#" class="btn btn-secondary">Скачать с Яндекс.Диска</a>
             
             <p style="margin-top: 20px; color: #999; font-size: 14px;">
@@ -453,35 +537,56 @@
         </div>
     </section>
     
-    <!-- Отзывы -->
-    <section class="testimonials" id="reviews">
+    <!-- Секция отзывов -->
+    <section class="reviews" id="reviews">
         <div class="container">
-            <h2>Что говорят пользователи</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Отличная программа! Раньше 1С тормозила ужасно, после очистки всё летает. Спасибо!"
+            <h2>Отзывы пользователей</h2>
+            
+            <!-- Форма для отзыва -->
+            <div class="review-form">
+                <h3 style="margin-bottom: 20px;">Оставьте свой отзыв</h3>
+                <div id="notification" class="notification" style="display: none;"></div>
+                
+                <form id="reviewForm" onsubmit="submitReview(event)">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" required placeholder="Например: Анна">
                     </div>
-                    <div class="testimonial-author">Елена, бухгалтер</div>
-                    <div class="testimonial-position">ООО "Ромашка"</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "У нас в компании 30 бухгалтеров. Раньше ходил по всем и чистил вручную. Теперь запускаю программу удаленно и всё готово."
+                    
+                    <div class="form-group">
+                        <label for="city">Город (необязательно)</label>
+                        <input type="text" id="city" placeholder="Например: Москва">
                     </div>
-                    <div class="testimonial-author">Алексей, системный администратор</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Простая и понятная программа. Никаких лишних настроек. Нажал кнопку и готово. Рекомендую!"
+                    
+                    <div class="form-group">
+                        <label for="review">Ваш отзыв</label>
+                        <textarea id="review" required placeholder="Напишите, что вы думаете о программе..."></textarea>
                     </div>
-                    <div class="testimonial-author">Мария, главный бухгалтер</div>
-                </div>
+                    
+                    <div class="form-group">
+                        <label for="rating">Оценка</label>
+                        <select id="rating" required>
+                            <option value="5">5 - Отлично</option>
+                            <option value="4">4 - Хорошо</option>
+                            <option value="3">3 - Нормально</option>
+                            <option value="2">2 - Плохо</option>
+                            <option value="1">1 - Ужасно</option>
+                        </select>
+                    </div>
+                    
+                    <p class="form-hint">Отзывы появляются после проверки (не более 24 часов)</p>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">Отправить отзыв</button>
+                </form>
+            </div>
+            
+            <!-- Список отзывов -->
+            <div class="reviews-list" id="reviewsList">
+                <!-- Здесь будут отзывы -->
             </div>
         </div>
     </section>
     
-    <!-- Подвал -->
     <footer class="footer">
         <div class="container">
             <p>© 2026 Чистильщик кэша 1С</p>
@@ -489,5 +594,112 @@
             <p style="margin-top: 20px; font-size: 12px;">Программа распространяется бесплатно</p>
         </div>
     </footer>
+
+    <!-- Скрипт для работы отзывов -->
+    <script>
+        // Загружаем отзывы при открытии страницы
+        document.addEventListener('DOMContentLoaded', loadReviews);
+
+        function loadReviews() {
+            const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
+            displayReviews(reviews);
+        }
+
+        function displayReviews(reviews) {
+            const container = document.getElementById('reviewsList');
+            
+            if (reviews.length === 0) {
+                container.innerHTML = '<div class="no-reviews">Пока нет отзывов. Будьте первым!</div>';
+                return;
+            }
+
+            let html = '';
+            // Показываем только проверенные отзывы (verified: true)
+            const verifiedReviews = reviews.filter(r => r.verified);
+            
+            if (verifiedReviews.length === 0) {
+                container.innerHTML = '<div class="no-reviews">Пока нет проверенных отзывов. Они появятся после модерации.</div>';
+                return;
+            }
+
+            verifiedReviews.forEach(review => {
+                const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+                const location = review.city ? `, ${review.city}` : '';
+                
+                html += `
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-author">${review.name}${location}</span>
+                            <span class="review-date">${review.date}</span>
+                        </div>
+                        <div style="color: #fbbf24; margin-bottom: 10px;">${stars}</div>
+                        <div class="review-text">${review.text}</div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function showNotification(message, type) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `notification ${type}`;
+            notification.style.display = 'block';
+            
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 5000);
+        }
+
+        function submitReview(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const city = document.getElementById('city').value.trim();
+            const text = document.getElementById('review').value.trim();
+            const rating = document.getElementById('rating').value;
+            const submitBtn = document.getElementById('submitBtn');
+            
+            // Простейшая проверка на спам
+            if (text.length < 10) {
+                showNotification('Отзыв должен содержать хотя бы 10 символов', 'error');
+                return;
+            }
+
+            // Блокируем кнопку на время
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Отправка...';
+
+            // Создаем отзыв
+            const review = {
+                id: Date.now(),
+                name: name,
+                city: city,
+                text: text,
+                rating: parseInt(rating),
+                date: new Date().toLocaleDateString('ru-RU'),
+                verified: false // Новые отзывы ждут проверки
+            };
+
+            // Сохраняем в localStorage
+            const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
+            reviews.push(review);
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+
+            // Очищаем форму
+            document.getElementById('reviewForm').reset();
+            
+            // Показываем уведомление
+            showNotification('Спасибо за отзыв! Он появится после проверки.', 'success');
+
+            // Разблокируем кнопку
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Отправить отзыв';
+
+            // Перезагружаем отзывы (покажутся только проверенные)
+            loadReviews();
+        }
+    </script>
 </body>
 </html>
