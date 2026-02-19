@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
+    
+    <!-- Иконка сайта (ДОЛЖНА БЫТЬ ЗДЕСЬ) -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    Чистильщик кэша 1С | Официальный сайт
-</title>
+    
+    <!-- Заголовок (ОТДЕЛЬНО) -->
+    <title>Чистильщик кэша 1С | Официальный сайт</title>
+    
+    <!-- Мета-теги -->
     <meta name="keywords" content="чистильщик кэша 1с, очистка кэша 1с, ускорить 1с, программа для 1с, удалить временные файлы 1с, 1с тормозит, очистка 1с">
     <meta name="description" content="Чистильщик кэша 1С - программа для очистки временных файлов 1С. Ускоряет работу, освобождает место на диске. Бесплатно, безопасно, не требует установки.">
     <meta name="author" content="Твое имя">
+    
     <style>
+        /* Все стили без изменений, они правильные */
         * {
             margin: 0;
             padding: 0;
@@ -253,7 +259,6 @@
             font-weight: bold;
         }
         
-        /* Стили для формы отзывов */
         .reviews {
             background: #f8f9fa;
             padding: 80px 0;
@@ -405,7 +410,6 @@
             }
         }
 
-        /* Уведомления */
         .notification {
             max-width: 600px;
             margin: 20px auto;
@@ -541,12 +545,10 @@
         </div>
     </section>
     
-    <!-- Секция отзывов -->
     <section class="reviews" id="reviews">
         <div class="container">
             <h2>Отзывы пользователей</h2>
             
-            <!-- Форма для отзыва -->
             <div class="review-form">
                 <h3 style="margin-bottom: 20px;">Оставьте свой отзыв</h3>
                 <div id="notification" class="notification" style="display: none;"></div>
@@ -584,10 +586,7 @@
                 </form>
             </div>
             
-            <!-- Список отзывов -->
-            <div class="reviews-list" id="reviewsList">
-                <!-- Здесь будут отзывы -->
-            </div>
+            <div class="reviews-list" id="reviewsList"></div>
         </div>
     </section>
     
@@ -599,9 +598,7 @@
         </div>
     </footer>
 
-    <!-- Скрипт для работы отзывов -->
     <script>
-        // Загружаем отзывы при открытии страницы
         document.addEventListener('DOMContentLoaded', loadReviews);
 
         function loadReviews() {
@@ -618,7 +615,6 @@
             }
 
             let html = '';
-            // Показываем только проверенные отзывы (verified: true)
             const verifiedReviews = reviews.filter(r => r.verified);
             
             if (verifiedReviews.length === 0) {
@@ -665,17 +661,14 @@
             const rating = document.getElementById('rating').value;
             const submitBtn = document.getElementById('submitBtn');
             
-            // Простейшая проверка на спам
             if (text.length < 10) {
                 showNotification('Отзыв должен содержать хотя бы 10 символов', 'error');
                 return;
             }
 
-            // Блокируем кнопку на время
             submitBtn.disabled = true;
             submitBtn.textContent = 'Отправка...';
 
-            // Создаем отзыв
             const review = {
                 id: Date.now(),
                 name: name,
@@ -683,29 +676,22 @@
                 text: text,
                 rating: parseInt(rating),
                 date: new Date().toLocaleDateString('ru-RU'),
-                verified: false // Новые отзывы ждут проверки
+                verified: false
             };
 
-            // Сохраняем в localStorage
             const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
             reviews.push(review);
             localStorage.setItem('reviews', JSON.stringify(reviews));
 
-            // Очищаем форму
             document.getElementById('reviewForm').reset();
             
-            // Показываем уведомление
             showNotification('Спасибо за отзыв! Он появится после проверки.', 'success');
 
-            // Разблокируем кнопку
             submitBtn.disabled = false;
             submitBtn.textContent = 'Отправить отзыв';
 
-            // Перезагружаем отзывы (покажутся только проверенные)
             loadReviews();
         }
     </script>
 </body>
 </html>
-
-
