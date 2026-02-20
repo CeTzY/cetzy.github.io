@@ -287,78 +287,7 @@
             text-align: center;
             font-size: 36px;
             margin-bottom: 40px;
-        }
-        
-        .review-form {
-            max-width: 600px;
-            margin: 0 auto 50px;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
             color: #333;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-        
-        .form-group textarea {
-            height: 100px;
-            resize: vertical;
-        }
-        
-        .form-hint {
-            font-size: 12px;
-            color: #999;
-            margin-top: 5px;
-        }
-        
-        .submit-btn {
-            background: #667eea;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background: #5a67d8;
-        }
-        
-        .submit-btn:disabled {
-            background: #999;
-            cursor: not-allowed;
-        }
-        
-        .reviews-list {
-            max-width: 800px;
-            margin: 0 auto;
         }
         
         .review-card {
@@ -428,28 +357,8 @@
                 display: none;
             }
         }
-
-        .notification {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 15px;
-            border-radius: 5px;
-            text-align: center;
-            font-weight: 600;
-        }
-        
-        .notification.success {
-            background: #48bb78;
-            color: white;
-        }
-        
-        .notification.error {
-            background: #f56565;
-            color: white;
-        }
     </style>
 </head>
-<!-- Здесь начинается тело сайта, но мы его пока не трогаем -->
 <body>
     <header class="header">
         <div class="container header-content">
@@ -565,48 +474,28 @@
         </div>
     </section>
     
+    <!-- Секция отзывов - новая, простая -->
     <section class="reviews" id="reviews">
         <div class="container">
             <h2>Отзывы пользователей</h2>
             
-            <div class="review-form">
-                <h3 style="margin-bottom: 20px;">Оставьте свой отзыв</h3>
-                <div id="notification" class="notification" style="display: none;"></div>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto 50px; padding: 40px 20px; background: white; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                <p style="font-size: 18px; margin-bottom: 30px; color: #333;">
+                    Хотите оставить отзыв о программе?<br>Напишите в Telegram-бота, и он появится на сайте после проверки.
+                </p>
                 
-                <form id="reviewForm" onsubmit="submitReview(event)">
-                    <div class="form-group">
-                        <label for="name">Ваше имя</label>
-                        <input type="text" id="name" required placeholder="Например: Анна">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="city">Город (необязательно)</label>
-                        <input type="text" id="city" placeholder="Например: Москва">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="review">Ваш отзыв</label>
-                        <textarea id="review" required placeholder="Напишите, что вы думаете о программе..."></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="rating">Оценка</label>
-                        <select id="rating" required>
-                            <option value="5">5 - Отлично</option>
-                            <option value="4">4 - Хорошо</option>
-                            <option value="3">3 - Нормально</option>
-                            <option value="2">2 - Плохо</option>
-                            <option value="1">1 - Ужасно</option>
-                        </select>
-                    </div>
-                    
-                    <p class="form-hint">Отзывы появляются после проверки (не более 24 часов)</p>
-                    
-                    <button type="submit" class="submit-btn" id="submitBtn">Отправить отзыв</button>
-                </form>
+                <a href="https://t.me/1C_Cache_Cleaner_Bot" target="_blank" 
+                   style="display: inline-block; background: #667eea; color: white; padding: 15px 40px; 
+                          border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 18px;
+                          transition: transform 0.3s, box-shadow 0.3s;">
+                    📱 Написать отзыв в Telegram
+                </a>
             </div>
             
-            <div class="reviews-list" id="reviewsList"></div>
+            <!-- Список опубликованных отзывов -->
+            <div class="reviews-list" id="reviewsList">
+                <!-- Здесь будут отзывы, которые ты добавишь вручную -->
+            </div>
         </div>
     </section>
     
@@ -617,104 +506,5 @@
             <p style="margin-top: 20px; font-size: 12px;">Программа распространяется бесплатно</p>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', loadReviews);
-
-        function loadReviews() {
-            const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
-            displayReviews(reviews);
-        }
-
-        function displayReviews(reviews) {
-            const container = document.getElementById('reviewsList');
-            
-            if (reviews.length === 0) {
-                container.innerHTML = '<div class="no-reviews">Пока нет отзывов. Будьте первым!</div>';
-                return;
-            }
-
-            let html = '';
-            const verifiedReviews = reviews.filter(r => r.verified);
-            
-            if (verifiedReviews.length === 0) {
-                container.innerHTML = '<div class="no-reviews">Пока нет проверенных отзывов. Они появятся после модерации.</div>';
-                return;
-            }
-
-            verifiedReviews.forEach(review => {
-                const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
-                const location = review.city ? `, ${review.city}` : '';
-                
-                html += `
-                    <div class="review-card">
-                        <div class="review-header">
-                            <span class="review-author">${review.name}${location}</span>
-                            <span class="review-date">${review.date}</span>
-                        </div>
-                        <div style="color: #fbbf24; margin-bottom: 10px;">${stars}</div>
-                        <div class="review-text">${review.text}</div>
-                    </div>
-                `;
-            });
-
-            container.innerHTML = html;
-        }
-
-        function showNotification(message, type) {
-            const notification = document.getElementById('notification');
-            notification.textContent = message;
-            notification.className = `notification ${type}`;
-            notification.style.display = 'block';
-            
-            setTimeout(() => {
-                notification.style.display = 'none';
-            }, 5000);
-        }
-
-        function submitReview(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('name').value.trim();
-            const city = document.getElementById('city').value.trim();
-            const text = document.getElementById('review').value.trim();
-            const rating = document.getElementById('rating').value;
-            const submitBtn = document.getElementById('submitBtn');
-            
-            if (text.length < 10) {
-                showNotification('Отзыв должен содержать хотя бы 10 символов', 'error');
-                return;
-            }
-
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Отправка...';
-
-            const review = {
-                id: Date.now(),
-                name: name,
-                city: city,
-                text: text,
-                rating: parseInt(rating),
-                date: new Date().toLocaleDateString('ru-RU'),
-                verified: false
-            };
-
-            const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
-            reviews.push(review);
-            localStorage.setItem('reviews', JSON.stringify(reviews));
-
-            document.getElementById('reviewForm').reset();
-            
-            showNotification('Спасибо за отзыв! Он появится после проверки.', 'success');
-
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Отправить отзыв';
-
-            loadReviews();
-        }
-    </script>
 </body>
 </html>
-
-
-
