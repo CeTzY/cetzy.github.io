@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Обо мне — CeTzY Dev</title>
     
+    <!-- Мета-теги -->
+    <meta name="description" content="CeTzY Dev — независимый разработчик программ для Windows. Информация о проектах, стеке технологий, контакты для связи и сотрудничества.">
+    <meta name="keywords" content="cetzy, cetzy dev, разработчик, программист, контакты, сотрудничество">
+    
     <!-- Подключаем единый стиль -->
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -22,79 +26,138 @@
         </div>
     </header>
 
+    <!-- Hero блок -->
     <section class="hero">
         <div class="container">
-            <h1>CeTzY</h1>
-            <p>Разработчик полезных программ для Windows</p>
+            <h1>Обо мне</h1>
+            <p>CeTzY — независимый разработчик программного обеспечения для Windows</p>
         </div>
     </section>
 
+    <!-- Основной контент -->
     <section style="background: white; padding: 60px 0;">
         <div class="container">
-            <div style="max-width: 800px; margin: 0 auto; background: #f8f9fa; padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+            <div style="max-width: 900px; margin: 0 auto;">
                 
-                <h2 style="color: #333; margin-bottom: 20px;">Привет!</h2>
-                
-                <p style="color: #666; margin-bottom: 20px; font-size: 18px;">
-                    Меня зовут Михаил. Я разрабатываю простые и полезные программы для Windows, которые решают реальные проблемы.
-                </p>
-                
-                <p style="color: #666; margin-bottom: 30px; font-size: 18px;">
-                    Все мои программы бесплатны. Если они помогают вам в работе или творчестве, буду рад любой поддержке.
-                </p>
-                
-                <h3 style="color: #333; margin: 30px 0 15px;">Контакты</h3>
-                
-                <div style="display: flex; flex-direction: column; gap: 15px;">
-                    <!-- Email -->
-                    <div style="display: flex; align-items: center; gap: 15px; background: white; padding: 15px 20px; border-radius: 10px; border: 1px solid #eee;">
-                        <span style="font-size: 24px;"></span>
-                        <div>
-                            <div style="font-weight: bold; color: #333;">Email</div>
-                            <a href="mailto:cleaner1c@mail.ru" style="color: #667eea; text-decoration: none;">cleaner1c@mail.ru</a>
+                <!-- Фото/аватар и кратко -->
+                <div style="display: flex; gap: 40px; align-items: center; margin-bottom: 50px; flex-wrap: wrap;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 60px; font-weight: bold; margin: 0 auto;">
+                        CZ
+                    </div>
+                    <div style="flex: 1;">
+                        <h2 style="color: #333; margin-bottom: 15px;">Привет, я CeTzY</h2>
+                        <p style="color: #666; font-size: 18px; margin-bottom: 15px;">
+                            Разрабатываю полезные программы для Windows, которые решают реальные проблемы пользователей.
+                        </p>
+                        <p style="color: #666; font-size: 16px;">
+                            Все мои проекты бесплатны, безопасны и не требуют установки. Я верю, что хороший софт должен быть доступен каждому.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Навыки и стек -->
+                <div style="margin-bottom: 50px;">
+                    <h3 style="color: #333; font-size: 24px; margin-bottom: 25px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;">⚙️ Технологии</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                        <span style="background: #f0f0f0; padding: 8px 20px; border-radius: 50px; font-size: 14px;">Python</span>
+                        <span style="background: #f0f0f0; padding: 8px 20px; border-radius: 50px; font-size: 14px;">Tkinter</span>
+                        <span style="background: #f0f0f0; padding: 8px 20px; border-radius: 50px; font-size: 14px;">HTML/CSS</span>
+                        <span style="background: #f0f0f0; padding: 8px 20px; border-radius: 50px; font-size: 14px;">Git/GitHub</span>
+                        <span style="background: #f0f0f0; padding: 8px 20px; border-radius: 50px; font-size: 14px;">PyInstaller</span>
+                        <span style="background: #f0f0f0; padding: 8px 20px; border-radius: 50px; font-size: 14px;">Telegram API</span>
+                    </div>
+                </div>
+
+                <!-- Проекты (кратко) -->
+                <div style="margin-bottom: 50px;">
+                    <h3 style="color: #333; font-size: 24px; margin-bottom: 25px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;">Текущие проекты</h3>
+                    
+                    <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #333; margin-bottom: 10px;">1C Cache Cleaner</h4>
+                        <p style="color: #666; margin-bottom: 10px;">Программа для автоматической очистки кэша 1С. Ускоряет работу, освобождает место на диске.</p>
+                        <div style="display: flex; gap: 10px; color: #999; font-size: 14px;">
+                            <span>✓ Запущено: 2026</span>
+                            <span>✓ Версия: 2.1</span>
                         </div>
                     </div>
                     
-                    <!-- Telegram -->
-                    <div style="display: flex; align-items: center; gap: 15px; background: white; padding: 15px 20px; border-radius: 10px; border: 1px solid #eee;">
-                        <span style="font-size: 24px;"></span>
-                        <div>
-                            <div style="font-weight: bold; color: #333;">Telegram</div>
+                    <div style="background: #f8f9fa; padding: 25px; border-radius: 10px;">
+                        <h4 style="color: #333; margin-bottom: 10px;">Kvadratik Pro</h4>
+                        <p style="color: #666; margin-bottom: 10px;">Пиксельный редактор с поддержкой анимации и слоёв. Для художников и дизайнеров.</p>
+                        <div style="display: flex; gap: 10px; color: #999; font-size: 14px;">
+                            <span>✓ Запущено: 2026</span>
+                            <span>✓ Версия: 3.0</span>
+                            <span>✓ В разработке</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Контакты и сотрудничество -->
+                <div style="margin-bottom: 50px;">
+                    <h3 style="color: #333; font-size: 24px; margin-bottom: 25px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;">📬 Контакты и сотрудничество</h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                        
+                        <!-- Email -->
+                        <div style="background: white; padding: 20px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                            <div style="font-size: 24px; margin-bottom: 10px;"></div>
+                            <div style="font-weight: bold; color: #333; margin-bottom: 5px;">Email</div>
+                            <a href="mailto:mv14529376@Gmail.com" style="color: #667eea; text-decoration: none;">mv14529376@Gmail.com</a>
+                            <div style="font-size: 12px; color: #999; margin-top: 5px;">Для общих вопросов</div>
+                        </div>
+                        
+                        <!-- Telegram -->
+                        <div style="background: white; padding: 20px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                            <div style="font-size: 24px; margin-bottom: 10px;"></div>
+                            <div style="font-weight: bold; color: #333; margin-bottom: 5px;">Telegram</div>
                             <a href="https://t.me/1C_Cache_Cleaner_Bot" target="_blank" style="color: #667eea; text-decoration: none;">@1C_Cache_Cleaner_Bot</a>
-                            <div style="font-size: 12px; color: #999;">(бот для отзывов)</div>
+                            <div style="font-size: 12px; color: #999; margin-top: 5px;">Бот для отзывов и предложений</div>
                         </div>
-                    </div>
-                    
-                    <!-- GitHub -->
-                    <div style="display: flex; align-items: center; gap: 15px; background: white; padding: 15px 20px; border-radius: 10px; border: 1px solid #eee;">
-                        <span style="font-size: 24px;"></span>
-                        <div>
-                            <div style="font-weight: bold; color: #333;">GitHub</div>
+                        
+                        <!-- GitHub -->
+                        <div style="background: white; padding: 20px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                            <div style="font-size: 24px; margin-bottom: 10px;"></div>
+                            <div style="font-weight: bold; color: #333; margin-bottom: 5px;">GitHub</div>
                             <a href="https://github.com/CeTzY" target="_blank" style="color: #667eea; text-decoration: none;">github.com/CeTzY</a>
+                            <div style="font-size: 12px; color: #999; margin-top: 5px;">Исходный код проектов</div>
                         </div>
+                        
+                        <!-- Для сотрудничества -->
+                        <div style="background: white; padding: 20px; border-radius: 10px; border: 1px solid #eee; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                            <div style="font-size: 24px; margin-bottom: 10px;"></div>
+                            <div style="font-weight: bold; color: #333; margin-bottom: 5px;">Сотрудничество</div>
+                            <div style="color: #666;">По вопросам рекламы и партнёрств</div>
+                            <a href="mailto:mv14529376@Gmail.com?subject=Сотрудничество" style="color: #667eea; text-decoration: none;">Написать письмо</a>
+                        </div>
+                        
                     </div>
                 </div>
-                
-                <!-- Блок поддержки -->
-                <div style="margin-top: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px; text-align: center;">
-                    <h3 style="color: white; margin-bottom: 15px;">Поддержать разработку</h3>
-                    <p style="color: white; opacity: 0.9; margin-bottom: 25px;">
-                        Если мои программы вам полезны, можете угостить меня кофе ☕
+
+                <!-- Поддержка -->
+                <div style="background: linear-gradient(135deg, #f5f7fa 0%, #e9ecf0 100%); padding: 30px; border-radius: 10px; text-align: center;">
+                    <h3 style="color: #333; margin-bottom: 15px;">Поддержать разработку</h3>
+                    <p style="color: #666; margin-bottom: 25px;">
+                        Все программы бесплатны. Если они помогают вам в работе или творчестве, вы можете поддержать проект.
                     </p>
-                    <a href="https://yoomoney.ru/to/4100119477760313" target="_blank" class="btn btn-primary" style="background: white; color: #667eea;">💛 ЮMoney</a>
-                    <p style="color: white; margin-top: 15px; font-size: 14px; opacity: 0.8;">
-                        Или на карту: 2202 2056 2856 8104
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://yoomoney.ru/to/4100119477760313" target="_blank" class="btn btn-primary">💛 ЮMoney</a>
+                    </div>
+                    <p style="margin-top: 20px; color: #999; font-size: 14px;">
+                        Карта Сбера: 2202 2056 2856 8104
                     </p>
                 </div>
-                
+
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 CeTzY Dev</p>
-            <p><a href="mailto:cleaner1c@mail.ru">cleaner1c@mail.ru</a></p>
+            <p>© 2026 CeTzY Dev. Все права защищены.</p>
+            <p>
+                <a href="mailto:mv14529376@Gmail.com">mv14529376@Gmail.com</a> • 
+                <a href="https://github.com/CeTzY" target="_blank">GitHub</a>
+            </p>
         </div>
     </footer>
 </body>
