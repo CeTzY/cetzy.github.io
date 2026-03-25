@@ -21,6 +21,8 @@
             background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
             position: relative;
             overflow: hidden;
+            text-align: center;
+            padding: 80px 0;
         }
         
         .hero::before {
@@ -34,6 +36,19 @@
             pointer-events: none;
         }
         
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            color: #cccccc;
+        }
+        
         .version {
             display: inline-block;
             background: linear-gradient(135deg, #646cff, #7c3aed);
@@ -42,6 +57,7 @@
             font-size: 14px;
             margin-bottom: 20px;
             font-weight: bold;
+            color: white;
         }
         
         .update-card {
@@ -50,6 +66,14 @@
             padding: 40px;
             margin: 40px 0;
             border: 1px solid rgba(100,108,255,0.2);
+        }
+        
+        .update-card h2 {
+            color: white;
+        }
+        
+        .update-card p {
+            color: #cccccc;
         }
         
         .features-4-0 {
@@ -95,6 +119,7 @@
         .terminal p {
             margin: 8px 0;
             font-family: 'Consolas', monospace;
+            color: #cccccc;
         }
         
         .requirements-grid {
@@ -118,9 +143,22 @@
             margin-bottom: 8px;
         }
         
+        .requirement-card p {
+            color: #cccccc;
+        }
+        
         .roles {
             background: #0a0a0f;
             padding: 60px 0;
+        }
+        
+        .roles h2 {
+            color: white;
+            text-align: center;
+        }
+        
+        .roles p {
+            color: #aaa;
         }
         
         .roles-grid {
@@ -152,6 +190,29 @@
         .role-icon {
             margin-right: 8px;
             font-size: 16px;
+        }
+        
+        .features {
+            background: #0f0f14;
+        }
+        
+        .features h2 {
+            color: white;
+            text-align: center;
+        }
+        
+        .feature-card p {
+            color: #aaaaaa;
+        }
+        
+        .hotkeys {
+            background: #0a0a0f;
+            padding: 60px 0;
+        }
+        
+        .hotkeys h2 {
+            color: white;
+            text-align: center;
         }
         
         .hotkeys-grid {
@@ -191,6 +252,43 @@
             border-top: 1px solid rgba(100,108,255,0.2);
         }
         
+        .ai-section h3 {
+            color: white;
+        }
+        
+        .download {
+            background: #0f0f14;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .download h2 {
+            color: white;
+        }
+        
+        .download p {
+            color: #cccccc;
+        }
+        
+        .download-info {
+            background: #1e1e2a;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .download-info h3 {
+            color: white;
+            margin-bottom: 16px;
+        }
+        
+        .download-info li {
+            color: #cccccc;
+            margin: 8px 0;
+        }
+        
         @media (max-width: 768px) {
             .update-card {
                 padding: 24px;
@@ -207,7 +305,7 @@
 <body>
     <header class="header">
         <div class="container header-content">
-            <div class="logo">✨ Nexus AI</div>
+            <div class="logo" style="color: white;">✨ Nexus AI</div>
             <nav class="nav">
                 <a href="../index.html">Главная</a>
                 <a href="../1c-cleaner/">1C Cleaner</a>
@@ -222,7 +320,7 @@
         <div class="container">
             <div class="version">⚡ Версия 1.0</div>
             <h1>Nexus AI</h1>
-            <p style="font-size: 20px; max-width: 700px; margin: 0 auto;">Твой центр искусственного интеллекта. 20+ ролей, анимация печати, автосохранение и полная конфиденциальность.</p>
+            <p style="font-size: 20px; max-width: 700px; margin: 0 auto; color: #cccccc;">Твой центр искусственного интеллекта. 20+ ролей, анимация печати, автосохранение и полная конфиденциальность.</p>
             <div class="hero-buttons" style="margin-top: 30px;">
                 <a href="#download" class="btn btn-primary">📥 Скачать бесплатно</a>
                 <a href="#features" class="btn btn-outline">✨ Возможности</a>
@@ -233,7 +331,7 @@
     <div class="container">
         <div class="update-card">
             <h2 style="text-align: center; margin-bottom: 20px;">Nexus AI 1.0</h2>
-            <p style="text-align: center; color: #aaa; margin-bottom: 40px;">Твой умный компаньон, который всегда рядом</p>
+            <p style="text-align: center; margin-bottom: 40px;">Твой умный компаньон, который всегда рядом</p>
             
             <div class="features-4-0">
                 <div class="feature-4-0">
@@ -280,7 +378,7 @@
                     <p style="color: #4a90e2; font-weight: bold; margin-bottom: 16px;">🔧 УСТАНОВКА</p>
                     <p>1. Скачай и установи Ollama → <a href="https://ollama.ai/download" target="_blank" style="color: #646cff;">ollama.ai/download</a></p>
                     <p>2. Загрузи модель:</p>
-                    <p style="background: #0a0a0f; padding: 8px 12px; border-radius: 6px; font-family: monospace; margin: 8px 0;">ollama pull gpt-oss:20b-cloud</p>
+                    <p style="background: #0a0a0f; padding: 8px 12px; border-radius: 6px; font-family: monospace; margin: 8px 0; color: #4a90e2;">ollama pull gpt-oss:20b-cloud</p>
                     <p>3. Запусти Nexus AI и общайся!</p>
                     <p style="color: #888; margin-top: 16px;">💡 Модель загружается один раз (~20 ГБ, 5-15 минут)</p>
                 </div>
@@ -290,8 +388,8 @@
     
     <section class="roles">
         <div class="container">
-            <h2 style="text-align: center;">🎭 22 РОЛИ AI</h2>
-            <p style="text-align: center; color: #aaa; margin-bottom: 30px;">Выбери собеседника под настроение</p>
+            <h2>🎭 22 РОЛИ AI</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Выбери собеседника под настроение</p>
             <div class="roles-grid">
                 <div class="role-card"><span class="role-icon">🧙‍♂️</span> Наставник</div>
                 <div class="role-card"><span class="role-icon">📊</span> Аналитик</div>
@@ -380,15 +478,15 @@
                 </a>
             </div>
             
-            <div class="download-info" style="background: #1e1e2a; border-radius: 16px; padding: 24px; text-align: left; max-width: 500px; margin: 0 auto;">
-                <h3 style="margin-bottom: 16px;">📦 В состав входит:</h3>
+            <div class="download-info">
+                <h3>📦 В состав входит:</h3>
                 <ul style="list-style: none; padding: 0;">
-                    <li style="margin: 8px 0;">✓ Готовый установщик для Windows</li>
-                    <li style="margin: 8px 0;">✓ 22 уникальные роли AI</li>
-                    <li style="margin: 8px 0;">✓ Эффект печатающей машинки</li>
-                    <li style="margin: 8px 0;">✓ Автосохранение чатов</li>
-                    <li style="margin: 8px 0;">✓ Панель истории с поиском</li>
-                    <li style="margin: 8px 0;">✓ Закрепление сообщений</li>
+                    <li>✓ Готовый установщик для Windows</li>
+                    <li>✓ 22 уникальные роли AI</li>
+                    <li>✓ Эффект печатающей машинки</li>
+                    <li>✓ Автосохранение чатов</li>
+                    <li>✓ Панель истории с поиском</li>
+                    <li>✓ Закрепление сообщений</li>
                 </ul>
             </div>
             
