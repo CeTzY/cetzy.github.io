@@ -10,35 +10,204 @@
     <title>Nexus AI | Центр искусственного интеллекта</title>
     
     <meta name="keywords" content="ai ассистент, нейросеть, chat ai, локальный ai, ollama, gpt-oss, роли ai">
-    <meta name="description" content="Nexus AI - твой центр искусственного интеллекта. 20+ ролей AI, анимация печати, автосохранение чатов, копирование кода одним кликом.">
+    <meta name="description" content="Nexus AI - твой центр искусственного интеллекта. 20+ ролей AI, анимация печати, автосохранение чатов.">
     <meta name="author" content="CeTzY Dev">
     
     <link rel="stylesheet" href="../style.css">
     
-    <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();
-       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-       ym(106921415, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true,
-            ecommerce:"dataLayer",
-            ssr: true,
-            referrer: document.referrer,
-            url: location.href
-       });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/106921415" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <style>
+        /* Дополнительные стили для Nexus AI */
+        .hero {
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(100,108,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .version {
+            display: inline-block;
+            background: linear-gradient(135deg, #646cff, #7c3aed);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .update-card {
+            background: linear-gradient(135deg, #1e1e2a 0%, #2d2d30 100%);
+            border-radius: 24px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 1px solid rgba(100,108,255,0.2);
+        }
+        
+        .features-4-0 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+        
+        .feature-4-0 {
+            background: rgba(255,255,255,0.03);
+            padding: 24px;
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .feature-4-0:hover {
+            transform: translateY(-5px);
+            border-color: rgba(100,108,255,0.3);
+        }
+        
+        .feature-4-0 h4 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #646cff;
+        }
+        
+        .feature-4-0 p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+        
+        .terminal {
+            background: #0a0a0f;
+            border-radius: 12px;
+            padding: 24px;
+            font-family: 'Consolas', monospace;
+            border: 1px solid #2d2d30;
+            margin: 20px 0;
+        }
+        
+        .terminal p {
+            margin: 8px 0;
+            font-family: 'Consolas', monospace;
+        }
+        
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .requirement-card {
+            background: rgba(255,255,255,0.03);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .requirement-card h4 {
+            font-size: 28px;
+            color: #646cff;
+            margin-bottom: 8px;
+        }
+        
+        .roles {
+            background: #0a0a0f;
+            padding: 60px 0;
+        }
+        
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+            margin-top: 30px;
+        }
+        
+        .role-card {
+            background: #1e1e2a;
+            padding: 12px 16px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #cccccc;
+            transition: all 0.3s ease;
+            border: 1px solid #2d2d30;
+            cursor: default;
+        }
+        
+        .role-card:hover {
+            background: #646cff;
+            color: white;
+            transform: translateY(-2px);
+            border-color: #646cff;
+        }
+        
+        .role-icon {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        
+        .hotkeys-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 12px;
+            margin-top: 30px;
+        }
+        
+        .hotkey-item {
+            background: #1e1e2a;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #cccccc;
+            border: 1px solid #2d2d30;
+        }
+        
+        .hotkey-key {
+            background: #2d2d30;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-weight: bold;
+            color: #646cff;
+            margin-right: 12px;
+        }
+        
+        .btn-large {
+            padding: 16px 48px;
+            font-size: 18px;
+        }
+        
+        .ai-section {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(100,108,255,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .update-card {
+                padding: 24px;
+            }
+            .features-4-0 {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <div class="container header-content">
-            <div class="logo">Nexus AI</div>
+            <div class="logo">✨ Nexus AI</div>
             <nav class="nav">
                 <a href="../index.html">Главная</a>
                 <a href="../1c-cleaner/">1C Cleaner</a>
@@ -49,108 +218,80 @@
         </div>
     </header>
     
-    <section class="hero" id="about" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+    <section class="hero">
         <div class="container">
-            <h1>🤖 Nexus AI</h1>
-            <div class="version">Версия 1.0</div>
-            <p>Твой центр искусственного интеллекта. 20+ уникальных ролей AI, анимация печатающей машинки, автосохранение чатов и многое другое.</p>
-            <div class="hero-buttons">
-                <a href="#download" class="btn btn-primary">Скачать бесплатно</a>
-                <a href="#features" class="btn btn-outline">Возможности</a>
+            <div class="version">⚡ Версия 1.0</div>
+            <h1>Nexus AI</h1>
+            <p style="font-size: 20px; max-width: 700px; margin: 0 auto;">Твой центр искусственного интеллекта. 20+ ролей, анимация печати, автосохранение и полная конфиденциальность.</p>
+            <div class="hero-buttons" style="margin-top: 30px;">
+                <a href="#download" class="btn btn-primary">📥 Скачать бесплатно</a>
+                <a href="#features" class="btn btn-outline">✨ Возможности</a>
             </div>
         </div>
     </section>
     
-    <section class="update-4-0">
+    <div class="container">
         <div class="update-card">
-            <h2>Nexus AI 1.0</h2>
-            <h3>ТВОЙ ЦЕНТР ИСКУССТВЕННОГО ИНТЕЛЛЕКТА</h3>
+            <h2 style="text-align: center; margin-bottom: 20px;">Nexus AI 1.0</h2>
+            <p style="text-align: center; color: #aaa; margin-bottom: 40px;">Твой умный компаньон, который всегда рядом</p>
             
             <div class="features-4-0">
                 <div class="feature-4-0">
                     <h4>🎭 20+ РОЛЕЙ AI</h4>
-                    <p>Наставник, Аналитик, Коуч, Стоик, Психолог, Мотиватор, Скептик, Художник, Музыкант, Сценарист, Поэт, Программист, Физик, Биолог, Историк, Юморист, Гейм-мастер, Киноман, Менеджер, Дзен-мастер, Тимлид и Универсальный.</p>
+                    <p>Наставник, Психолог, Программист, Поэт, Мотиватор, Аналитик, Стоик, Коуч, Художник, Музыкант, Сценарист, Скептик, Историк, Физик, Биолог, Юморист, Гейм-мастер, Киноман, Менеджер, Дзен-мастер, Тимлид и Универсальный.</p>
                 </div>
-                
                 <div class="feature-4-0">
-                    <h4>💬 АНИМАЦИЯ ПЕЧАТАЮЩЕЙ МАШИНКИ</h4>
-                    <p>Кинематографичный режим ответа — текст появляется по буквам, как в старых фильмах. Или быстрый режим — ответ мгновенный.</p>
+                    <h4>💬 АНИМАЦИЯ ПЕЧАТИ</h4>
+                    <p>Кинематографичный режим — текст появляется по буквам. Быстрый режим — ответ мгновенный. Выбирай под настроение.</p>
                 </div>
-                
                 <div class="feature-4-0">
-                    <h4>📚 АВТОСОХРАНЕНИЕ ЧАТОВ</h4>
-                    <p>Все диалоги автоматически сохраняются. Удобная панель истории с поиском по содержимому.</p>
+                    <h4>📚 АВТОСОХРАНЕНИЕ</h4>
+                    <p>Все диалоги автоматически сохраняются. Удобная панель истории с поиском по содержимому. Ничего не потеряется.</p>
                 </div>
-                
                 <div class="feature-4-0">
-                    <h4>📌 ЗАКРЕПЛЕНИЕ СООБЩЕНИЙ</h4>
-                    <p>Закрепляй важные ответы, чтобы быстро вернуться к ним позже. Отдельная панель закрепленных сообщений.</p>
+                    <h4>📌 ЗАКРЕПЛЕНИЕ</h4>
+                    <p>Закрепляй важные ответы, чтобы быстро вернуться к ним. Отдельная панель для закрепленных сообщений.</p>
                 </div>
             </div>
             
             <div class="ai-section">
-                <h4>⚙️ ТРЕБОВАНИЯ ДЛЯ РАБОТЫ</h4>
+                <h3 style="text-align: center; margin-bottom: 30px;">⚙️ СИСТЕМНЫЕ ТРЕБОВАНИЯ</h3>
+                
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <h4>💻</h4>
+                        <p>Windows 10/11</p>
+                    </div>
+                    <div class="requirement-card">
+                        <h4>8+ ГБ</h4>
+                        <p>RAM (рекомендуется 16 ГБ)</p>
+                    </div>
+                    <div class="requirement-card">
+                        <h4>4+ ГБ</h4>
+                        <p>Свободного места</p>
+                    </div>
+                    <div class="requirement-card">
+                        <h4>~20 ГБ</h4>
+                        <p>Для модели AI</p>
+                    </div>
+                </div>
                 
                 <div class="terminal">
-                    <p style="color: #4a90e2; font-weight: bold;">🔧 НЕОБХОДИМО УСТАНОВИТЬ</p>
-                    <p style="color: #4a90e2;">1. Скачай и установи Ollama: https://ollama.ai/download</p>
-                    <p style="color: #4a90e2;">2. Загрузи модель gpt-oss:20b-cloud</p>
-                    <p style="color: #4a90e2;">3. Запусти Nexus AI</p>
-                    
-                    <p style="color: #cccccc; margin-top: 20px;">Команды для терминала:</p>
-                    <p>ollama pull gpt-oss:20b-cloud</p>
-                    
-                    <p style="color: #4a90e2; font-weight: bold; margin-top: 20px;">💻 СИСТЕМНЫЕ ТРЕБОВАНИЯ</p>
-                    <p>• Windows 10/11</p>
-                    <p>• 8+ ГБ RAM (рекомендуется 16 ГБ)</p>
-                    <p>• 4+ ГБ свободного места на диске</p>
-                    <p>• Модель gpt-oss:20b-cloud (~20 ГБ)</p>
+                    <p style="color: #4a90e2; font-weight: bold; margin-bottom: 16px;">🔧 УСТАНОВКА</p>
+                    <p>1. Скачай и установи Ollama → <a href="https://ollama.ai/download" target="_blank" style="color: #646cff;">ollama.ai/download</a></p>
+                    <p>2. Загрузи модель:</p>
+                    <p style="background: #0a0a0f; padding: 8px 12px; border-radius: 6px; font-family: monospace; margin: 8px 0;">ollama pull gpt-oss:20b-cloud</p>
+                    <p>3. Запусти Nexus AI и общайся!</p>
+                    <p style="color: #888; margin-top: 16px;">💡 Модель загружается один раз (~20 ГБ, 5-15 минут)</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     
-    <section class="features" id="features">
+    <section class="roles">
         <div class="container">
-            <h2>Что умеет Nexus AI</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>20+ Ролей AI</h3>
-                    <p>Выбирай личность AI. Наставник, Психолог, Программист, Поэт, Мотиватор и многие другие.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3>Анимация печати</h3>
-                    <p>Кинематографичный режим — текст появляется по буквам. Быстрый режим — ответ мгновенный.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>История чатов</h3>
-                    <p>Автосохранение всех диалогов. Поиск по содержимому. Загрузка и удаление чатов.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📌</div>
-                    <h3>Закрепление</h3>
-                    <p>Закрепляй важные ответы. Отдельная панель с быстрым доступом к закрепленным сообщениям.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📋</div>
-                    <h3>Копирование кода</h3>
-                    <p>Блоки кода с кнопками "Копировать" и "Скачать". Подсветка синтаксиса и выделение текста.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Тёмная/светлая тема</h3>
-                    <p>Выбирай тему оформления под свой вкус. Автоматическое обновление интерфейса.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="roles" id="roles">
-        <div class="container">
-            <h2>Доступные роли AI</h2>
+            <h2 style="text-align: center;">🎭 22 РОЛИ AI</h2>
+            <p style="text-align: center; color: #aaa; margin-bottom: 30px;">Выбери собеседника под настроение</p>
             <div class="roles-grid">
                 <div class="role-card"><span class="role-icon">🧙‍♂️</span> Наставник</div>
                 <div class="role-card"><span class="role-icon">📊</span> Аналитик</div>
@@ -178,80 +319,108 @@
         </div>
     </section>
     
-    <section class="hotkeys" id="hotkeys">
+    <section class="features" id="features">
         <div class="container">
-            <h2>Горячие клавиши</h2>
+            <h2>✨ ВСЕ ВОЗМОЖНОСТИ</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>22 Роли AI</h3>
+                    <p>Меняй личность ассистента под любую задачу</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Анимация печати</h3>
+                    <p>Кинематографичный или быстрый режим</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>История чатов</h3>
+                    <p>Автосохранение и поиск по диалогам</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📌</div>
+                    <h3>Закрепление</h3>
+                    <p>Сохраняй важные сообщения</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Код с кнопками</h3>
+                    <p>Копируй и скачивай код одной кнопкой</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Тёмная/светлая тема</h3>
+                    <p>Выбери оформление по вкусу</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="hotkeys">
+        <div class="container">
+            <h2>⌨️ ГОРЯЧИЕ КЛАВИШИ</h2>
             <div class="hotkeys-grid">
-                <div class="hotkey-item"><span class="hotkey-key">Enter</span> - Отправить сообщение</div>
-                <div class="hotkey-item"><span class="hotkey-key">Shift+Enter</span> - Новая строка</div>
-                <div class="hotkey-item"><span class="hotkey-key">Ctrl+N</span> - Новый чат</div>
-                <div class="hotkey-item"><span class="hotkey-key">Esc</span> - Полный экран</div>
+                <div class="hotkey-item"><span class="hotkey-key">Enter</span> Отправить сообщение</div>
+                <div class="hotkey-item"><span class="hotkey-key">Shift+Enter</span> Новая строка</div>
+                <div class="hotkey-item"><span class="hotkey-key">Ctrl+N</span> Новый чат</div>
+                <div class="hotkey-item"><span class="hotkey-key">Esc</span> Полный экран</div>
             </div>
         </div>
     </section>
     
     <section class="download" id="download">
         <div class="container">
-            <h2>Скачать Nexus AI 1.0</h2>
-            <p>Бесплатно, без регистрации. Версия 1.0 для Windows 10/11.</p>
-            
-            <div class="download-info">
-                <h3>Что входит в версию 1.0:</h3>
-                <ul>
-                    <li>Готовый установщик (50 МБ)</li>
-                    <li>20+ уникальных ролей AI</li>
-                    <li>Эффект печатающей машинки</li>
-                    <li>Автосохранение чатов</li>
-                    <li>Панель истории с поиском</li>
-                    <li>Закрепление сообщений</li>
-                    <li>Тёмная/светлая тема</li>
-                    <li>Копирование кода одним кликом</li>
-                </ul>
-            </div>
+            <h2>📥 СКАЧАТЬ NEXUS AI 1.0</h2>
+            <p style="margin-bottom: 30px;">Бесплатно, без регистрации, без ограничений</p>
             
             <div style="margin: 30px 0;">
-                <a href="Nexus_AI_Setup.exe" class="btn btn-primary" style="font-size: 20px; padding: 20px 50px;">
-                    📥 Скачать установщик (50 МБ)
+                <a href="Nexus_AI_Setup.exe" class="btn btn-primary btn-large" style="font-size: 22px; padding: 18px 60px;">
+                    ⬇️ Скачать установщик (50 МБ)
                 </a>
             </div>
             
-            <p style="color: #cccccc; margin: 20px 0;">
-                После установки запустите программу. При первом запуске покажется интерактивное обучение.
-            </p>
+            <div class="download-info" style="background: #1e1e2a; border-radius: 16px; padding: 24px; text-align: left; max-width: 500px; margin: 0 auto;">
+                <h3 style="margin-bottom: 16px;">📦 В состав входит:</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 8px 0;">✓ Готовый установщик для Windows</li>
+                    <li style="margin: 8px 0;">✓ 22 уникальные роли AI</li>
+                    <li style="margin: 8px 0;">✓ Эффект печатающей машинки</li>
+                    <li style="margin: 8px 0;">✓ Автосохранение чатов</li>
+                    <li style="margin: 8px 0;">✓ Панель истории с поиском</li>
+                    <li style="margin: 8px 0;">✓ Закрепление сообщений</li>
+                </ul>
+            </div>
             
-            <div style="text-align: center; margin: 40px auto; max-width: 600px;">
-                <div style="background: linear-gradient(135deg, #2d2d30 0%, #1e1e1e 100%); padding: 30px; border-radius: 15px; border: 1px solid #3f3f46;">
-                    <h3 style="color: white; margin-bottom: 15px;">Поддержать разработчика</h3>
+            <div style="text-align: center; margin: 50px auto; max-width: 500px;">
+                <div style="background: linear-gradient(135deg, #2d2d30 0%, #1e1e1e 100%); padding: 30px; border-radius: 20px;">
+                    <h3 style="color: white; margin-bottom: 15px;">☕ Поддержать разработчика</h3>
                     <p style="color: #cccccc; margin-bottom: 25px;">
-                        Программа полностью бесплатна. Если она вам помогает, можете угостить автора кофе.
+                        Программа бесплатна. Если она вам помогает — можете угостить автора кофе.
                     </p>
-                    
                     <a href="https://yoomoney.ru/to/4100119477760313" target="_blank" 
-                       style="display: inline-block; background: #ffcc00; color: #333; padding: 15px 40px; 
-                              border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px;
-                              box-shadow: 0 4px 10px rgba(255,204,0,0.3); transition: transform 0.3s;">
+                       style="display: inline-block; background: #ffcc00; color: #333; padding: 12px 40px; 
+                              border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 16px;">
                         💛 ЮMoney
                     </a>
-                    
-                    <p style="margin-top: 20px; color: #999; font-size: 14px;">
-                        Или просто на карту: <b>2202 2056 2856 8104</b>
+                    <p style="margin-top: 16px; color: #999; font-size: 13px;">
+                        Карта: <b>2202 2056 2856 8104</b>
                     </p>
                 </div>
             </div>
             
-            <p style="color: #666; font-size: 14px; margin-top: 20px;">
-                Для работы требуется установленный Ollama и модель gpt-oss:20b-cloud.<br>
-                Подробности в разделе "Требования для работы"
+            <p style="color: #888; font-size: 13px; margin-top: 30px;">
+                💡 Для работы требуется Ollama и модель gpt-oss:20b-cloud.<br>
+                Подробности в разделе "Системные требования" выше.
             </p>
         </div>
     </section>
     
     <footer class="footer">
         <div class="container">
-            <p>© 2026 Nexus AI 1.0</p>
-            <p>Разработчик: <strong style="color: #007acc;">CeTzY Dev</strong></p>
-            <p>По вопросам: <a href="mailto:mv14529376@Gmail.com">mv14529376@Gmail.com</a></p>
-            <p style="margin-top: 20px; font-size: 12px;">Бесплатная программа. Работает на базе Ollama и GPT-OSS</p>
+            <p>© 2026 Nexus AI 1.0 | Разработчик: <strong style="color: #646cff;">CeTzY Dev</strong></p>
+            <p><a href="mailto:mv14529376@Gmail.com" style="color: #888;">mv14529376@Gmail.com</a></p>
+            <p style="margin-top: 16px; font-size: 12px; color: #666;">Бесплатная программа. Работает на базе Ollama и GPT-OSS</p>
         </div>
     </footer>
 </body>
